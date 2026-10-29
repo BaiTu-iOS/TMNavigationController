@@ -10,23 +10,10 @@
 
 @implementation TMNavigationConfig
 
-static UIEdgeInsets __tm_safeAreaInsets;
-
-+ (UIEdgeInsets)tm_safeAreaInsets {
-    static dispatch_once_t safeAreaInsetsOnceToken;
-    dispatch_once(&safeAreaInsetsOnceToken, ^{
-        UIWindow *keyWindow = [TMNavigationConfig tm_getKeyWindow];
-        if (keyWindow == nil) {
-            keyWindow = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-        }
-        if (@available(iOS 11.0, *)) {
-            UIEdgeInsets safeInset = keyWindow.safeAreaInsets;
-            __tm_safeAreaInsets = safeInset;
-        } else {
-            __tm_safeAreaInsets = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0);
-        }
-    });
-    return __tm_safeAreaInsets;
++ (UIEdgeInsets)tm_safeAreaInsets
+{
+    // 开合及场景尺寸变化后必须重新读取，不能缓存首次窗口的安全区。
+    return [self tm_getKeyWindow].safeAreaInsets;
 }
 
 + (UIWindow *)tm_getKeyWindow {

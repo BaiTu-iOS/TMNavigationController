@@ -11,6 +11,9 @@
 
 @interface TMNavigationBarView()
 
+- (void)layoutButtonsInContentFrame:(CGRect)frame;
+- (CGRect)frame:(CGRect)frame avoidingRegionsOfKind:(UIViewReservedRegionKind *)kind inView:(UIView *)view API_AVAILABLE(ios(27.1));
+
 @end
 
 @implementation TMNavigationBarView
@@ -18,7 +21,15 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, TM_TopBarHeight)];
     if (self) {
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
         [self configView];
+        if (@available(iOS 27.1, *)) {
+            __weak typeof(self) weakSelf = self;
+            UIHingeInteraction *interaction = [[UIHingeInteraction alloc] initWithUpdateHandler:^(__unused UIHingeInteraction *sender, __unused UIHingeInteractionUpdate *update) {
+                [weakSelf setNeedsLayout];
+            }];
+            [self addInteraction:interaction];
+        }
     }
     return self;
 }
@@ -105,6 +116,85 @@
     [_rightFirstButton setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
     [self addSubview:_rightFirstButton];
 }
+- (void)didMoveToSuperview
+{
+    [super didMoveToSuperview];
+    [self setNeedsLayout];
+}
+
+- (void)safeAreaInsetsDidChange
+{
+    [super safeAreaInsetsDidChange];
+    [self setNeedsLayout];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    UIView *hostView = self.superview;
+    // 导航栏尚未挂到页面时，等待实际容器提供尺寸和安全区。
+    if (!hostView) return;
+
+    UIEdgeInsets insets = hostView.safeAreaInsets;
+    CGFloat width = CGRectGetWidth(hostView.bounds);
+    self.frame = CGRectMake(0, 0, width, insets.top + 44.0);
+    _backgroundImageView.frame = self.bounds;
+    _lineView.frame = CGRectMake(0, CGRectGetHeight(self.bounds) - 0.5, width, 0.5);
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    _gradientLayer.frame = self.bounds;
+    [CATransaction commit];
+
+    CGRect frame = CGRectMake(insets.left, insets.top, width - insets.left - insets.right, 44.0);
+    if (@available(iOS 27.1, *)) {
+        frame = [self frame:frame avoidingRegionsOfKind:UIViewReservedRegionKind.occlusionRegionKind inView:hostView];
+    }
+    [self layoutButtonsInContentFrame:frame];
+}
+
+- (void)layoutButtonsInContentFrame:(CGRect)frame
+{
+    CGFloat leading = 0;
+    CGFloat trailing = CGRectGetWidth(frame);
+    for (UIButton *button in [NSArray arrayWithObjects:_backButton, _leftButton, _rightButton, _rightFirstButton, nil]) {
+        // 隐藏按钮不占据标题空间；文字按钮使用其实际内容宽度。
+        if (button.hidden) continue;
+        CGFloat buttonWidth = MAX(44.0, [button sizeThatFits:frame.size].width + 10.0);
+        BOOL atLeading = button == _backButton || button == _leftButton;
+        CGFloat x = atLeading ? leading : trailing - buttonWidth;
+        button.frame = CGRectMake(CGRectGetMinX(frame) + (kIsRTL ? CGRectGetWidth(frame) - x - buttonWidth : x), CGRectGetMinY(frame), buttonWidth, CGRectGetHeight(frame));
+        if (atLeading) {
+            leading += buttonWidth;
+        } else {
+            trailing -= buttonWidth;
+        }
+    }
+    CGFloat side = MAX(leading, CGRectGetWidth(frame) - trailing);
+    CGRect titleFrame = CGRectMake(CGRectGetMinX(frame) + side, CGRectGetMinY(frame), MAX(0, CGRectGetWidth(frame) - side * 2), CGRectGetHeight(frame));
+    if (@available(iOS 27.1, *)) {
+        titleFrame = [self frame:titleFrame avoidingRegionsOfKind:UIViewReservedRegionKind.divisionRegionKind inView:self.superview];
+    }
+    _titleLabel.frame = titleFrame;
+}
+
+- (CGRect)frame:(CGRect)frame avoidingRegionsOfKind:(UIViewReservedRegionKind *)kind inView:(UIView *)view
+{
+    for (UIViewReservedRegion *region in [view reservedRegionsOfKind:kind]) {
+        CGRect overlap = CGRectIntersection(frame, region.frame);
+        // 区域坐标来自同一个承载页面，仅避让与当前导航内容相交的有效区域。
+        if (CGRectIsEmpty(overlap) || CGRectIsNull(overlap)) continue;
+        CGFloat leftWidth = CGRectGetMinX(overlap) - CGRectGetMinX(frame);
+        CGFloat rightWidth = CGRectGetMaxX(frame) - CGRectGetMaxX(overlap);
+        if (leftWidth >= rightWidth) {
+            frame.size.width = leftWidth;
+        } else {
+            frame.origin.x = CGRectGetMaxX(overlap);
+            frame.size.width = rightWidth;
+        }
+    }
+    return frame;
+}
+
 - (void)backLastView:(UIButton*)button{
     if (self.click) {
         self.click(button);
