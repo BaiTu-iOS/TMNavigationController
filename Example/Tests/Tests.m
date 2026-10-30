@@ -111,12 +111,14 @@
     XCTAssertEqualWithAccuracy(CGRectGetHeight(bar.frame), insets.top + 44, 0.01);
     XCTAssertGreaterThanOrEqual(CGRectGetMinX(bar.backButton.frame), insets.left);
     XCTAssertLessThanOrEqual(CGRectGetMaxX(bar.rightButton.frame), CGRectGetWidth(host.view.bounds) - insets.right);
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 270100
     if (@available(iOS 27.1, *)) {
         for (UIViewReservedRegion *region in [host.view reservedRegionsOfKind:UIViewReservedRegionKind.occlusionRegionKind]) {
             XCTAssertFalse(CGRectIntersectsRect(bar.rightButton.frame, region.frame));
             XCTAssertFalse(CGRectIntersectsRect(bar.backButton.frame, region.frame));
         }
     }
+#endif
     window.hidden = YES;
 }
 

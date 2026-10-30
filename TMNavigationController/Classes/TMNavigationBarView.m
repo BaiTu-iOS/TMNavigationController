@@ -12,7 +12,11 @@
 @interface TMNavigationBarView()
 
 - (void)layoutButtonsInContentFrame:(CGRect)frame;
+
+// @available 只检查运行系统，旧 SDK 还需要在编译期排除 iOS 27.1 的新类型。
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 270100
 - (CGRect)frame:(CGRect)frame avoidingRegionsOfKind:(UIViewReservedRegionKind *)kind inView:(UIView *)view API_AVAILABLE(ios(27.1));
+#endif
 
 @end
 
@@ -23,6 +27,7 @@
     if (self) {
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
         [self configView];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 270100
         if (@available(iOS 27.1, *)) {
             __weak typeof(self) weakSelf = self;
             UIHingeInteraction *interaction = [[UIHingeInteraction alloc] initWithUpdateHandler:^(__unused UIHingeInteraction *sender, __unused UIHingeInteractionUpdate *update) {
@@ -30,6 +35,7 @@
             }];
             [self addInteraction:interaction];
         }
+#endif
     }
     return self;
 }
@@ -146,9 +152,11 @@
     [CATransaction commit];
 
     CGRect frame = CGRectMake(insets.left, insets.top, width - insets.left - insets.right, 44.0);
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 270100
     if (@available(iOS 27.1, *)) {
         frame = [self frame:frame avoidingRegionsOfKind:UIViewReservedRegionKind.occlusionRegionKind inView:hostView];
     }
+#endif
     [self layoutButtonsInContentFrame:frame];
 }
 
@@ -171,12 +179,15 @@
     }
     CGFloat side = MAX(leading, CGRectGetWidth(frame) - trailing);
     CGRect titleFrame = CGRectMake(CGRectGetMinX(frame) + side, CGRectGetMinY(frame), MAX(0, CGRectGetWidth(frame) - side * 2), CGRectGetHeight(frame));
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 270100
     if (@available(iOS 27.1, *)) {
         titleFrame = [self frame:titleFrame avoidingRegionsOfKind:UIViewReservedRegionKind.divisionRegionKind inView:self.superview];
     }
+#endif
     _titleLabel.frame = titleFrame;
 }
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 270100
 - (CGRect)frame:(CGRect)frame avoidingRegionsOfKind:(UIViewReservedRegionKind *)kind inView:(UIView *)view
 {
     for (UIViewReservedRegion *region in [view reservedRegionsOfKind:kind]) {
@@ -194,6 +205,7 @@
     }
     return frame;
 }
+#endif
 
 - (void)backLastView:(UIButton*)button{
     if (self.click) {
