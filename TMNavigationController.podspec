@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     史上最好导航栏,TMNavigationController灵活的全屏滑动返回
                    DESC
 
-  s.homepage     = "https://github.com/youxingge/TMNavigationController"
+  s.homepage     = "https://github.com/BaiTu-iOS/TMNavigationController"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
