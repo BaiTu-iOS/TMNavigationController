@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TMNavigationController"
-  s.version      = "0.2.8"
+  s.version      = "0.2.9"
   s.summary      = "Custom Navigation used on iOS."
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     史上最好导航栏,TMNavigationController灵活的全屏滑动返回
                    DESC
 
-  s.homepage     = "https://github.com/youxingge/TMNavigationController"
+  s.homepage     = "https://github.com/BaiTu-iOS/TMNavigationController"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
