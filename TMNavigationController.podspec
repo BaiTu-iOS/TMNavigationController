@@ -92,6 +92,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "TMNavigationController/Classes/*.{h,m}"
+  s.private_header_files = "TMNavigationController/Classes/TMNavigationButton.h", "TMNavigationController/Classes/TMNavigationBarView+SystemButtons.h"
   # s.exclude_files = "TMNavigationController/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

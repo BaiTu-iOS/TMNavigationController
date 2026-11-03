@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
     [self initTabbar];
-    [self performSelector:@selector(gotoWindow) withObject:self afterDelay:0];
+
     
 }
 
@@ -40,9 +40,11 @@
     
 }
 
-- (void)gotoWindow{
-    TMAppDelegate * app = (TMAppDelegate*)[UIApplication sharedApplication].delegate;
-    app.window.rootViewController = _tabbar;
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    // Example 使用当前 Scene 的窗口，供系统竖栏与宿主布局测试使用。
+    self.view.window.rootViewController = _tabbar;
 }
 
 - (void)didReceiveMemoryWarning {

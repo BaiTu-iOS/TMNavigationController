@@ -8,8 +8,23 @@
 
 #import "TMNavigationBarView.h"
 #import "TMMacro.h"
+#import "TMNavigationButton.h"
+#import "TMNavigationBarView+SystemButtons.h"
 
 @interface TMNavigationBarView()
+
+/// 页面与系统按钮的内部绑定状态。
+@property(nonatomic, weak) UIViewController *tm_owner;
+
+/// 当前标准按钮是否由系统栏显示。
+@property(nonatomic) BOOL tm_systemButtonsActive;
+
+/// 系统接管前的返回项策略。
+@property(nonatomic) BOOL tm_originalHidesBackButton;
+
+/// 整栏显隐变化后通知导航控制器。
+@property(nonatomic, copy) void (^tm_presentationChanged)(void);
+
 
 - (void)layoutButtonsInContentFrame:(CGRect)frame;
 
@@ -61,7 +76,7 @@
     _titleLabel.font = [UIFont boldSystemFontOfSize:18.5];
     [self addSubview:_titleLabel];
     
-    _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _backButton = [TMNavigationButton buttonWithType:UIButtonTypeCustom];
     _backButton.adjustsImageWhenHighlighted = NO;
     [_backButton addTarget:self action:@selector(backLastView:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_backButton];
@@ -79,7 +94,7 @@
         _backButton.frame = CGRectMake(0, TM_StatusBarHeight, 55, ButtonViewHeight);
     }
     
-    _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _leftButton = [TMNavigationButton buttonWithType:UIButtonTypeCustom];
     _leftButton.adjustsImageWhenHighlighted = NO;
     [_leftButton setTitle:@"关闭" forState:UIControlStateNormal];
     _leftButton.titleLabel.font = [UIFont systemFontOfSize:16];
@@ -94,7 +109,7 @@
     [_leftButton setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
     [self addSubview:_leftButton];
     
-    _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _rightButton = [TMNavigationButton buttonWithType:UIButtonTypeCustom];
     _rightButton.adjustsImageWhenHighlighted = NO;
     [_rightButton setTitle:@"" forState:UIControlStateNormal];
     _rightButton.titleLabel.font = [UIFont systemFontOfSize:16];
@@ -107,7 +122,7 @@
     [_rightButton setTitleColor:UIColorFromRGB(0x27313e) forState:UIControlStateNormal];
     [self addSubview:_rightButton];
     
-    _rightFirstButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _rightFirstButton = [TMNavigationButton buttonWithType:UIButtonTypeCustom];
     _rightFirstButton.adjustsImageWhenHighlighted = NO;
     [_rightFirstButton setTitle:@"" forState:UIControlStateNormal];
     _rightFirstButton.titleLabel.font = [UIFont systemFontOfSize:16];
@@ -122,6 +137,19 @@
     [_rightFirstButton setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
     [self addSubview:_rightFirstButton];
 }
+- (void)setHidden:(BOOL)hidden
+{
+    [super setHidden:hidden];
+    [self tm_refreshSystemButtons];
+    if (_tm_presentationChanged) _tm_presentationChanged();
+}
+
+- (void)setAlpha:(CGFloat)alpha
+{
+    [super setAlpha:alpha];
+    [self tm_refreshSystemButtons];
+}
+
 - (void)didMoveToSuperview
 {
     [super didMoveToSuperview];
@@ -170,11 +198,16 @@
         CGFloat buttonWidth = MAX(44.0, [button sizeThatFits:frame.size].width + 10.0);
         BOOL atLeading = button == _backButton || button == _leftButton;
         CGFloat x = atLeading ? leading : trailing - buttonWidth;
-        button.frame = CGRectMake(CGRectGetMinX(frame) + (kIsRTL ? CGRectGetWidth(frame) - x - buttonWidth : x), CGRectGetMinY(frame), buttonWidth, CGRectGetHeight(frame));
+        if (button.translatesAutoresizingMaskIntoConstraints) {
+            button.frame = CGRectMake(CGRectGetMinX(frame) + (kIsRTL ? CGRectGetWidth(frame) - x - buttonWidth : x), CGRectGetMinY(frame), buttonWidth, CGRectGetHeight(frame));
+        }
+        // 业务约束控制的按钮保留原位置，标题按其实际占用范围避让。
+        CGFloat occupiedStart = CGRectGetMinX(button.frame) - CGRectGetMinX(frame);
+        CGFloat occupiedEnd = CGRectGetMaxX(button.frame) - CGRectGetMinX(frame);
         if (atLeading) {
-            leading += buttonWidth;
+            leading = MAX(leading, kIsRTL ? CGRectGetWidth(frame) - occupiedStart : occupiedEnd);
         } else {
-            trailing -= buttonWidth;
+            trailing = MIN(trailing, kIsRTL ? CGRectGetWidth(frame) - occupiedEnd : occupiedStart);
         }
     }
     CGFloat side = MAX(leading, CGRectGetWidth(frame) - trailing);

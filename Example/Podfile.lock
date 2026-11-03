@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TMNavigationController: 8e2028d1b10d6f18844d3b13616780bdb7a3fb1d
+  TMNavigationController: 5775663dd22704ea7cfad80d49f00088d876970e
 
 PODFILE CHECKSUM: d5dbc33bccac7cae36da80781569a4541c798b67
 

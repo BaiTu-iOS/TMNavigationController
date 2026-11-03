@@ -7,84 +7,92 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10BEDD446903DE26C2BE258D3CD7DACB /* TMNavigationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B39B1B9D7443424E25CEBD253850196 /* TMNavigationConfig.m */; };
+		02CDC3923209AB93FF2BE9BD628DF341 /* UIViewController+TMNavigationBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A6CBFAB6AB2A6F80B623452488DD1D8 /* UIViewController+TMNavigationBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08A1F58AAFD47E0BE24450796ECECE21 /* TMNavigationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F4A95ED0D82AF4A8D7FECB0950A61 /* TMNavigationConfig.m */; };
+		0A9F7874C676AF57FBECC03F03A607F2 /* TMNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7D71CD7F665046A204B365FA354805 /* TMNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1CF5185CB0DC66A6EB826E6D5747BB13 /* Pods-TMNavigationController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 411C3D361F8F0534F692FD7E1AD8BD4A /* Pods-TMNavigationController_Tests-dummy.m */; };
-		2F3FD3A214911B89A2041E4C57A39867 /* UIViewController+TMNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789C04F732E75EC9716EDFF9AE43997 /* UIViewController+TMNavigationBarView.m */; };
+		233E135122C9FF5DD9E5E5D20DB4ABB2 /* TMNavigationBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C4C11E594ACF32637F1B34F76C52789 /* TMNavigationBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		319C0FF371ED082CB84A3C6FE1EF3797 /* Pods-TMNavigationController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 922E1AD564529F0C57EB4782912D0F9D /* Pods-TMNavigationController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51DA49FB3D0DAD5C479BFA15FEDD617E /* TMNavigationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5AAA09CF50F62FA5238D2C9A5E36DD /* TMNavigationController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51AE4FF863F1102E65ED6A5E16150B13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
 		6428A917C22193BC4C57D23600E676E7 /* Pods-TMNavigationController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDA9B2F19B353B9CADAC2D89F726DE /* Pods-TMNavigationController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		678BEDFA094946F16A9F638ED9925BB0 /* UIViewController+TMNavigationBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE90945E7A4F93BB92B6189C747CB68 /* UIViewController+TMNavigationBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FBBFC9CC2B135BC302BCCF12188F777 /* TMMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 572480E1BC94A87762CBF8B8608E5780 /* TMMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F34B085DD67B65C3FEA0EB7CD2499EF /* TMNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F46E0293F9F3E4D38B50C099C9E802 /* TMNavigationBarView.m */; };
+		718A2AD3ADBF39DFD8B6680B04EA4AD8 /* TMNavigationBarView+SystemButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE8AAEFF64E445A5D7AC0D2F9C053FB /* TMNavigationBarView+SystemButtons.m */; };
 		77A620144202B4634E81D17AE4F3044E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		87DEA04F6025EAD9837EFEC99513DBE9 /* TMNavigationConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C48982CF9B3222FB7F0387A6311B9CF /* TMNavigationConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A799C8CFA666AC5D8E547E21964B0998 /* TMNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 45233457FF9D9EA460B1B48386201746 /* TMNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85730DA1B2BB549BFE70AEA150D8BDD8 /* TMNavigationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF41A4FC2BF6AC8B60AAB9E8E9DDD524 /* TMNavigationController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88DA0B3814A44633F4F5A95044135F06 /* TMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575AC83D90D470F8798C7F6B1B1B36D7 /* TMNavigationController.m */; };
+		976A99BEB615F6FA82189BC54AB88AAB /* TMMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E149400699543F70D739F5DD271A9C2 /* TMMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4AA10AF43825C0888EDDB5F66492C92 /* UIViewController+TMNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C21FCEC72B0C598281E7489A807338 /* UIViewController+TMNavigationBarView.m */; };
 		A92A0F0148BC46E62FC0472BA00579F9 /* Pods-TMNavigationController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB696786B9F2D3176F0228325F0B503 /* Pods-TMNavigationController_Example-dummy.m */; };
-		D46D0539F72AAB60DBCD2E1DA51BEB06 /* TMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6B1C0877692D7C719C47BC482FF33 /* TMNavigationController.m */; };
-		D6CDD27550C25FACFF1D5D358E6C9222 /* TMNavigationBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B4D8F9AD49F382FB815936A0793FB9 /* TMNavigationBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9FB86096846242EB7D58C4EF32ACF75 /* TMNavigationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 916D1D62A3F7090BAAB4B839BA588BB3 /* TMNavigationController-dummy.m */; };
+		AE643A336F43FCBEAF2AD6DD1FA8E7BC /* TMNavigationButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D31C2DA41ABA87AC93E9856B38ED5F6D /* TMNavigationButton.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D831C3892D51C92BBF9AAE38B2CF0AE4 /* TMNavigationBarView+SystemButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F3735EABC9959D9C3FDD5034B1DCA9B /* TMNavigationBarView+SystemButtons.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DDAC4A7C81BC1549D3128509F7CC75E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		E4080C5A286DE2858995B4E4F53F40E7 /* TMNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B0E2730DCD806172057EA983C3AEB4 /* TMNavigationBarView.m */; };
-		ECF5385C5A63DF30590B562404FB251D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		DFC74BBCF1A6ACF6B41F5C813748CB60 /* TMNavigationConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 748EA4D702EAD36144AFA49618AF83D1 /* TMNavigationConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F050ED38DD7BA3A23FF2510B8FBF56A8 /* TMNavigationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6247D7D1BA8CC7AAFBD66EDBBB7FF5F4 /* TMNavigationButton.m */; };
+		F97CD0CC0F722E1190F943524C9D313A /* TMNavigationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1616F9EF4FF8FCED30E9C0FBE00C9C47 /* TMNavigationController-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2F97D7EA00AA782E81E7DCBA45E8EA7E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD597BF2208710D61450F654FC0D4D07;
-			remoteInfo = "Pods-TMNavigationController_Example";
-		};
-		6C82C147B54B9B4FF9D08283328B2D54 /* PBXContainerItemProxy */ = {
+		91EE08D970821E0185E9EC7B24EA0E19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 779A1C377AD520CECF4234E79C0843E6;
 			remoteInfo = TMNavigationController;
 		};
+		BE1AB548A618A38A3A97E5D8B81BAF4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD597BF2208710D61450F654FC0D4D07;
+			remoteInfo = "Pods-TMNavigationController_Example";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B4D8F9AD49F382FB815936A0793FB9 /* TMNavigationBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMNavigationBarView.h; path = TMNavigationController/Classes/TMNavigationBarView.h; sourceTree = "<group>"; };
 		0B14BB0F74E1A484EA1EAC659905167D /* Pods-TMNavigationController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TMNavigationController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0E5AAA09CF50F62FA5238D2C9A5E36DD /* TMNavigationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TMNavigationController-umbrella.h"; sourceTree = "<group>"; };
-		1B39B1B9D7443424E25CEBD253850196 /* TMNavigationConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMNavigationConfig.m; path = TMNavigationController/Classes/TMNavigationConfig.m; sourceTree = "<group>"; };
-		2789C04F732E75EC9716EDFF9AE43997 /* UIViewController+TMNavigationBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TMNavigationBarView.m"; path = "TMNavigationController/Classes/UIViewController+TMNavigationBarView.m"; sourceTree = "<group>"; };
-		2BE6B1C0877692D7C719C47BC482FF33 /* TMNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMNavigationController.m; path = TMNavigationController/Classes/TMNavigationController.m; sourceTree = "<group>"; };
+		0F0D8C5FB1D4DB13119526969D8CFCCB /* TMNavigationController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TMNavigationController.release.xcconfig; sourceTree = "<group>"; };
+		13C21FCEC72B0C598281E7489A807338 /* UIViewController+TMNavigationBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TMNavigationBarView.m"; path = "TMNavigationController/Classes/UIViewController+TMNavigationBarView.m"; sourceTree = "<group>"; };
+		1616F9EF4FF8FCED30E9C0FBE00C9C47 /* TMNavigationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TMNavigationController-dummy.m"; sourceTree = "<group>"; };
+		29B3475C49748810F96C307197F2B43E /* TMNavigationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TMNavigationController.modulemap; sourceTree = "<group>"; };
+		2A6CBFAB6AB2A6F80B623452488DD1D8 /* UIViewController+TMNavigationBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TMNavigationBarView.h"; path = "TMNavigationController/Classes/UIViewController+TMNavigationBarView.h"; sourceTree = "<group>"; };
+		2E149400699543F70D739F5DD271A9C2 /* TMMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMMacro.h; path = TMNavigationController/Classes/TMMacro.h; sourceTree = "<group>"; };
 		3606DFEA4B762B9AFBDA824832C49D81 /* Pods-TMNavigationController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TMNavigationController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		36EEFFBC1006EAC2AA62AF10000466C0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		411C3D361F8F0534F692FD7E1AD8BD4A /* Pods-TMNavigationController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TMNavigationController_Tests-dummy.m"; sourceTree = "<group>"; };
-		45233457FF9D9EA460B1B48386201746 /* TMNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMNavigationController.h; path = TMNavigationController/Classes/TMNavigationController.h; sourceTree = "<group>"; };
-		5015162DA7D582912842E98880B0AFB7 /* TMNavigationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TMNavigationController.modulemap; sourceTree = "<group>"; };
+		4FB926F73AE334202578F383C45CAB05 /* TMNavigationController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TMNavigationController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5484195279874A0B878487290E98D4C9 /* Pods-TMNavigationController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TMNavigationController_Example.modulemap"; sourceTree = "<group>"; };
 		54DDA9B2F19B353B9CADAC2D89F726DE /* Pods-TMNavigationController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TMNavigationController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		55F278D1DDE1CCDDCFA25235FFA291BD /* Pods-TMNavigationController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TMNavigationController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		572480E1BC94A87762CBF8B8608E5780 /* TMMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMMacro.h; path = TMNavigationController/Classes/TMMacro.h; sourceTree = "<group>"; };
+		56A8ECED8062CA81DB9965BF5C229243 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		575AC83D90D470F8798C7F6B1B1B36D7 /* TMNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMNavigationController.m; path = TMNavigationController/Classes/TMNavigationController.m; sourceTree = "<group>"; };
+		5936959103CB1229EA23C01CBEB1597F /* TMNavigationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TMNavigationController-prefix.pch"; sourceTree = "<group>"; };
 		5AB696786B9F2D3176F0228325F0B503 /* Pods-TMNavigationController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TMNavigationController_Example-dummy.m"; sourceTree = "<group>"; };
 		5B21A7406A20431D687346C30ABEBEA6 /* Pods-TMNavigationController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TMNavigationController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5C48982CF9B3222FB7F0387A6311B9CF /* TMNavigationConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMNavigationConfig.h; path = TMNavigationController/Classes/TMNavigationConfig.h; sourceTree = "<group>"; };
-		60B0E2730DCD806172057EA983C3AEB4 /* TMNavigationBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMNavigationBarView.m; path = TMNavigationController/Classes/TMNavigationBarView.m; sourceTree = "<group>"; };
-		6AE90945E7A4F93BB92B6189C747CB68 /* UIViewController+TMNavigationBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TMNavigationBarView.h"; path = "TMNavigationController/Classes/UIViewController+TMNavigationBarView.h"; sourceTree = "<group>"; };
-		731896A326D89A3D02ABF1F9AA968D8B /* TMNavigationController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TMNavigationController.release.xcconfig; sourceTree = "<group>"; };
-		7850F12530CF80DF17D23FBA5AFC98EC /* TMNavigationController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TMNavigationController-Info.plist"; sourceTree = "<group>"; };
+		6247D7D1BA8CC7AAFBD66EDBBB7FF5F4 /* TMNavigationButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMNavigationButton.m; path = TMNavigationController/Classes/TMNavigationButton.m; sourceTree = "<group>"; };
+		6C4C11E594ACF32637F1B34F76C52789 /* TMNavigationBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMNavigationBarView.h; path = TMNavigationController/Classes/TMNavigationBarView.h; sourceTree = "<group>"; };
+		6F3735EABC9959D9C3FDD5034B1DCA9B /* TMNavigationBarView+SystemButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TMNavigationBarView+SystemButtons.h"; path = "TMNavigationController/Classes/TMNavigationBarView+SystemButtons.h"; sourceTree = "<group>"; };
+		748EA4D702EAD36144AFA49618AF83D1 /* TMNavigationConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMNavigationConfig.h; path = TMNavigationController/Classes/TMNavigationConfig.h; sourceTree = "<group>"; };
 		83215955EAF77F2E970095555CBA708D /* Pods-TMNavigationController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TMNavigationController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		88545F2672239A7430952EA83F031029 /* Pods-TMNavigationController_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TMNavigationController_Tests-Info.plist"; sourceTree = "<group>"; };
 		8DD302A0C5CA3A16716FDEBE8F4F8581 /* Pods-TMNavigationController_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TMNavigationController_Tests"; path = Pods_TMNavigationController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		916D1D62A3F7090BAAB4B839BA588BB3 /* TMNavigationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TMNavigationController-dummy.m"; sourceTree = "<group>"; };
+		8F7F4A95ED0D82AF4A8D7FECB0950A61 /* TMNavigationConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMNavigationConfig.m; path = TMNavigationController/Classes/TMNavigationConfig.m; sourceTree = "<group>"; };
 		922E1AD564529F0C57EB4782912D0F9D /* Pods-TMNavigationController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TMNavigationController_Example-umbrella.h"; sourceTree = "<group>"; };
-		968920CCE40CD1D74644C97936DB0321 /* TMNavigationController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TMNavigationController.debug.xcconfig; sourceTree = "<group>"; };
-		9AEEE3CDCE6C974858B9C46AFE5ED254 /* TMNavigationController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TMNavigationController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99D8E7CC19333527D5605ADF518E4D3A /* TMNavigationController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TMNavigationController-Info.plist"; sourceTree = "<group>"; };
+		9D2624E12CAE1591BC434444A40114C2 /* TMNavigationController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TMNavigationController.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A16A02A991052DF442507E5795E953D2 /* Pods-TMNavigationController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TMNavigationController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		AF573F7AFFBA4B84C9CADBE7141484D8 /* Pods-TMNavigationController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TMNavigationController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C61DF87AAB89752F704523858F4D4DE2 /* Pods-TMNavigationController_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TMNavigationController_Example"; path = Pods_TMNavigationController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6915A05B67687F3CF6DD6F9D8773AF5 /* Pods-TMNavigationController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TMNavigationController_Tests.modulemap"; sourceTree = "<group>"; };
+		CCE8AAEFF64E445A5D7AC0D2F9C053FB /* TMNavigationBarView+SystemButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TMNavigationBarView+SystemButtons.m"; path = "TMNavigationController/Classes/TMNavigationBarView+SystemButtons.m"; sourceTree = "<group>"; };
+		D31C2DA41ABA87AC93E9856B38ED5F6D /* TMNavigationButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMNavigationButton.h; path = TMNavigationController/Classes/TMNavigationButton.h; sourceTree = "<group>"; };
 		D37DD2D5CD0474FECB662807BDC50D15 /* TMNavigationController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TMNavigationController; path = TMNavigationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26CC0160CCBB91B9E122D8B322FF70F /* Pods-TMNavigationController_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TMNavigationController_Example-Info.plist"; sourceTree = "<group>"; };
 		E68EB07DD4CEFD713C9693AE2E152293 /* Pods-TMNavigationController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TMNavigationController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EB7F1A11B3E14E3434887CD0DD3AB848 /* TMNavigationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TMNavigationController-prefix.pch"; sourceTree = "<group>"; };
+		EF41A4FC2BF6AC8B60AAB9E8E9DDD524 /* TMNavigationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TMNavigationController-umbrella.h"; sourceTree = "<group>"; };
 		F0EA2487CCD38C0372ADE2CC6AC7EC31 /* Pods-TMNavigationController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TMNavigationController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F7F46E0293F9F3E4D38B50C099C9E802 /* TMNavigationBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMNavigationBarView.m; path = TMNavigationController/Classes/TMNavigationBarView.m; sourceTree = "<group>"; };
+		FE7D71CD7F665046A204B365FA354805 /* TMNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMNavigationController.h; path = TMNavigationController/Classes/TMNavigationController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,14 +104,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AE083699C41C7369CDFA9A039DECF83 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECF5385C5A63DF30590B562404FB251D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		98592AB7702AF3801CAAC70D1607CE65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,9 +112,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D701CD012938A39B1F2DE6E733CD9F67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51AE4FF863F1102E65ED6A5E16150B13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		356816FD14E3E9447B18493E07A6DB79 /* TMNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				2E149400699543F70D739F5DD271A9C2 /* TMMacro.h */,
+				6C4C11E594ACF32637F1B34F76C52789 /* TMNavigationBarView.h */,
+				F7F46E0293F9F3E4D38B50C099C9E802 /* TMNavigationBarView.m */,
+				6F3735EABC9959D9C3FDD5034B1DCA9B /* TMNavigationBarView+SystemButtons.h */,
+				CCE8AAEFF64E445A5D7AC0D2F9C053FB /* TMNavigationBarView+SystemButtons.m */,
+				D31C2DA41ABA87AC93E9856B38ED5F6D /* TMNavigationButton.h */,
+				6247D7D1BA8CC7AAFBD66EDBBB7FF5F4 /* TMNavigationButton.m */,
+				748EA4D702EAD36144AFA49618AF83D1 /* TMNavigationConfig.h */,
+				8F7F4A95ED0D82AF4A8D7FECB0950A61 /* TMNavigationConfig.m */,
+				FE7D71CD7F665046A204B365FA354805 /* TMNavigationController.h */,
+				575AC83D90D470F8798C7F6B1B1B36D7 /* TMNavigationController.m */,
+				2A6CBFAB6AB2A6F80B623452488DD1D8 /* UIViewController+TMNavigationBarView.h */,
+				13C21FCEC72B0C598281E7489A807338 /* UIViewController+TMNavigationBarView.m */,
+				7C8106159E1651B96A654A0618DE69DD /* Pod */,
+				E3447690166EA236A49E3C31BAAE75AE /* Support Files */,
+			);
+			name = TMNavigationController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		497DF33B1C120618B5341A51B7E74860 /* Pods-TMNavigationController_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,47 +188,21 @@
 			path = "Target Support Files/Pods-TMNavigationController_Example";
 			sourceTree = "<group>";
 		};
-		82FC1FB83CD4CC3793D7FC00D18D765E /* Support Files */ = {
+		6ED90488A9E3D561ABDDD9FEF532A29F /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5015162DA7D582912842E98880B0AFB7 /* TMNavigationController.modulemap */,
-				916D1D62A3F7090BAAB4B839BA588BB3 /* TMNavigationController-dummy.m */,
-				7850F12530CF80DF17D23FBA5AFC98EC /* TMNavigationController-Info.plist */,
-				EB7F1A11B3E14E3434887CD0DD3AB848 /* TMNavigationController-prefix.pch */,
-				0E5AAA09CF50F62FA5238D2C9A5E36DD /* TMNavigationController-umbrella.h */,
-				968920CCE40CD1D74644C97936DB0321 /* TMNavigationController.debug.xcconfig */,
-				731896A326D89A3D02ABF1F9AA968D8B /* TMNavigationController.release.xcconfig */,
+				356816FD14E3E9447B18493E07A6DB79 /* TMNavigationController */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TMNavigationController";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		8B8989FEBC4204066936C97D61C74637 /* Pod */ = {
+		7C8106159E1651B96A654A0618DE69DD /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				36EEFFBC1006EAC2AA62AF10000466C0 /* README.md */,
-				9AEEE3CDCE6C974858B9C46AFE5ED254 /* TMNavigationController.podspec */,
+				56A8ECED8062CA81DB9965BF5C229243 /* README.md */,
+				4FB926F73AE334202578F383C45CAB05 /* TMNavigationController.podspec */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		9894B995E9253B85C1FFFC711AF4F8F7 /* TMNavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				572480E1BC94A87762CBF8B8608E5780 /* TMMacro.h */,
-				00B4D8F9AD49F382FB815936A0793FB9 /* TMNavigationBarView.h */,
-				60B0E2730DCD806172057EA983C3AEB4 /* TMNavigationBarView.m */,
-				5C48982CF9B3222FB7F0387A6311B9CF /* TMNavigationConfig.h */,
-				1B39B1B9D7443424E25CEBD253850196 /* TMNavigationConfig.m */,
-				45233457FF9D9EA460B1B48386201746 /* TMNavigationController.h */,
-				2BE6B1C0877692D7C719C47BC482FF33 /* TMNavigationController.m */,
-				6AE90945E7A4F93BB92B6189C747CB68 /* UIViewController+TMNavigationBarView.h */,
-				2789C04F732E75EC9716EDFF9AE43997 /* UIViewController+TMNavigationBarView.m */,
-				8B8989FEBC4204066936C97D61C74637 /* Pod */,
-				82FC1FB83CD4CC3793D7FC00D18D765E /* Support Files */,
-			);
-			name = TMNavigationController;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		C019E1626D611C861717967255F0F2E1 /* Products */ = {
@@ -210,19 +215,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C2880A8867BF3993647521CDBDB00125 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9894B995E9253B85C1FFFC711AF4F8F7 /* TMNavigationController */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				C2880A8867BF3993647521CDBDB00125 /* Development Pods */,
+				6ED90488A9E3D561ABDDD9FEF532A29F /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				C019E1626D611C861717967255F0F2E1 /* Products */,
 				5944BF0498A77FB2206E3F982E1A3E5A /* Targets Support Files */,
@@ -237,6 +234,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E3447690166EA236A49E3C31BAAE75AE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				29B3475C49748810F96C307197F2B43E /* TMNavigationController.modulemap */,
+				1616F9EF4FF8FCED30E9C0FBE00C9C47 /* TMNavigationController-dummy.m */,
+				99D8E7CC19333527D5605ADF518E4D3A /* TMNavigationController-Info.plist */,
+				5936959103CB1229EA23C01CBEB1597F /* TMNavigationController-prefix.pch */,
+				EF41A4FC2BF6AC8B60AAB9E8E9DDD524 /* TMNavigationController-umbrella.h */,
+				9D2624E12CAE1591BC434444A40114C2 /* TMNavigationController.debug.xcconfig */,
+				0F0D8C5FB1D4DB13119526969D8CFCCB /* TMNavigationController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TMNavigationController";
+			sourceTree = "<group>";
+		};
 		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,24 +260,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		423379EA0F238EC50F7D9A24F7238293 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6FBBFC9CC2B135BC302BCCF12188F777 /* TMMacro.h in Headers */,
-				D6CDD27550C25FACFF1D5D358E6C9222 /* TMNavigationBarView.h in Headers */,
-				87DEA04F6025EAD9837EFEC99513DBE9 /* TMNavigationConfig.h in Headers */,
-				A799C8CFA666AC5D8E547E21964B0998 /* TMNavigationController.h in Headers */,
-				51DA49FB3D0DAD5C479BFA15FEDD617E /* TMNavigationController-umbrella.h in Headers */,
-				678BEDFA094946F16A9F638ED9925BB0 /* UIViewController+TMNavigationBarView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		46B0E20C4BFB95E1E85B19C2AD056E34 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6428A917C22193BC4C57D23600E676E7 /* Pods-TMNavigationController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8F7FE3C3B62402D58C4D5F9BFC91037 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				976A99BEB615F6FA82189BC54AB88AAB /* TMMacro.h in Headers */,
+				233E135122C9FF5DD9E5E5D20DB4ABB2 /* TMNavigationBarView.h in Headers */,
+				D831C3892D51C92BBF9AAE38B2CF0AE4 /* TMNavigationBarView+SystemButtons.h in Headers */,
+				AE643A336F43FCBEAF2AD6DD1FA8E7BC /* TMNavigationButton.h in Headers */,
+				DFC74BBCF1A6ACF6B41F5C813748CB60 /* TMNavigationConfig.h in Headers */,
+				0A9F7874C676AF57FBECC03F03A607F2 /* TMNavigationController.h in Headers */,
+				85730DA1B2BB549BFE70AEA150D8BDD8 /* TMNavigationController-umbrella.h in Headers */,
+				02CDC3923209AB93FF2BE9BD628DF341 /* UIViewController+TMNavigationBarView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +296,12 @@
 /* Begin PBXNativeTarget section */
 		779A1C377AD520CECF4234E79C0843E6 /* TMNavigationController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F82FC48C7DFCA9C85056ADB7C4142E0 /* Build configuration list for PBXNativeTarget "TMNavigationController" */;
+			buildConfigurationList = 9BEB863B02EFCC9F12E21527648DA870 /* Build configuration list for PBXNativeTarget "TMNavigationController" */;
 			buildPhases = (
-				423379EA0F238EC50F7D9A24F7238293 /* Headers */,
-				A6FB77512AC1E615D4EEF82245BCA471 /* Sources */,
-				6AE083699C41C7369CDFA9A039DECF83 /* Frameworks */,
-				5E5DE3943EA1146B37368E69234CB458 /* Resources */,
+				A8F7FE3C3B62402D58C4D5F9BFC91037 /* Headers */,
+				878CA1825BAE0BF5A7F5DD4C43201771 /* Sources */,
+				D701CD012938A39B1F2DE6E733CD9F67 /* Frameworks */,
+				7A0B78603C6B0311F5FFAE32F6F18604 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -310,7 +324,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9C0F60CE953E578FBA2108B11FDA3B9B /* PBXTargetDependency */,
+				2F008DF76A0967F6F7019820DE69A2FD /* PBXTargetDependency */,
 			);
 			name = "Pods-TMNavigationController_Tests";
 			productName = Pods_TMNavigationController_Tests;
@@ -329,7 +343,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5605E6BF5F04CAB476ADF89D6496D612 /* PBXTargetDependency */,
+				D3F4340B08580A034C950F889BE132AD /* PBXTargetDependency */,
 			);
 			name = "Pods-TMNavigationController_Example";
 			productName = Pods_TMNavigationController_Example;
@@ -375,7 +389,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E5DE3943EA1146B37368E69234CB458 /* Resources */ = {
+		7A0B78603C6B0311F5FFAE32F6F18604 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,36 +422,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6FB77512AC1E615D4EEF82245BCA471 /* Sources */ = {
+		878CA1825BAE0BF5A7F5DD4C43201771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4080C5A286DE2858995B4E4F53F40E7 /* TMNavigationBarView.m in Sources */,
-				10BEDD446903DE26C2BE258D3CD7DACB /* TMNavigationConfig.m in Sources */,
-				D46D0539F72AAB60DBCD2E1DA51BEB06 /* TMNavigationController.m in Sources */,
-				D9FB86096846242EB7D58C4EF32ACF75 /* TMNavigationController-dummy.m in Sources */,
-				2F3FD3A214911B89A2041E4C57A39867 /* UIViewController+TMNavigationBarView.m in Sources */,
+				6F34B085DD67B65C3FEA0EB7CD2499EF /* TMNavigationBarView.m in Sources */,
+				718A2AD3ADBF39DFD8B6680B04EA4AD8 /* TMNavigationBarView+SystemButtons.m in Sources */,
+				F050ED38DD7BA3A23FF2510B8FBF56A8 /* TMNavigationButton.m in Sources */,
+				08A1F58AAFD47E0BE24450796ECECE21 /* TMNavigationConfig.m in Sources */,
+				88DA0B3814A44633F4F5A95044135F06 /* TMNavigationController.m in Sources */,
+				F97CD0CC0F722E1190F943524C9D313A /* TMNavigationController-dummy.m in Sources */,
+				A4AA10AF43825C0888EDDB5F66492C92 /* UIViewController+TMNavigationBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5605E6BF5F04CAB476ADF89D6496D612 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TMNavigationController;
-			target = 779A1C377AD520CECF4234E79C0843E6 /* TMNavigationController */;
-			targetProxy = 6C82C147B54B9B4FF9D08283328B2D54 /* PBXContainerItemProxy */;
-		};
-		9C0F60CE953E578FBA2108B11FDA3B9B /* PBXTargetDependency */ = {
+		2F008DF76A0967F6F7019820DE69A2FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-TMNavigationController_Example";
 			target = BD597BF2208710D61450F654FC0D4D07 /* Pods-TMNavigationController_Example */;
-			targetProxy = 2F97D7EA00AA782E81E7DCBA45E8EA7E /* PBXContainerItemProxy */;
+			targetProxy = BE1AB548A618A38A3A97E5D8B81BAF4A /* PBXContainerItemProxy */;
+		};
+		D3F4340B08580A034C950F889BE132AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TMNavigationController;
+			target = 779A1C377AD520CECF4234E79C0843E6 /* TMNavigationController */;
+			targetProxy = 91EE08D970821E0185E9EC7B24EA0E19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1593B014F3342481FE591B91BAC2B4B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D2624E12CAE1591BC434444A40114C2 /* TMNavigationController.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TMNavigationController/TMNavigationController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TMNavigationController/TMNavigationController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TMNavigationController/TMNavigationController.modulemap";
+				PRODUCT_MODULE_NAME = TMNavigationController;
+				PRODUCT_NAME = TMNavigationController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		296F86E0DD688C440F8EB2FD9C0415AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -501,73 +550,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		2CFD5B1FA1F8861DA39015CB82CB1EAA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 731896A326D89A3D02ABF1F9AA968D8B /* TMNavigationController.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TMNavigationController/TMNavigationController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TMNavigationController/TMNavigationController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TMNavigationController/TMNavigationController.modulemap";
-				PRODUCT_MODULE_NAME = TMNavigationController;
-				PRODUCT_NAME = TMNavigationController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		466B8B540616B65B9B1507D99FB02EF6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 968920CCE40CD1D74644C97936DB0321 /* TMNavigationController.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TMNavigationController/TMNavigationController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TMNavigationController/TMNavigationController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TMNavigationController/TMNavigationController.modulemap";
-				PRODUCT_MODULE_NAME = TMNavigationController;
-				PRODUCT_NAME = TMNavigationController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -740,6 +722,40 @@
 			};
 			name = Release;
 		};
+		F82E963CF1181796C8CC882C0D356335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F0D8C5FB1D4DB13119526969D8CFCCB /* TMNavigationController.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TMNavigationController/TMNavigationController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TMNavigationController/TMNavigationController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TMNavigationController/TMNavigationController.modulemap";
+				PRODUCT_MODULE_NAME = TMNavigationController;
+				PRODUCT_NAME = TMNavigationController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		FCA5B8F563E38E411F07449EC7E6EF1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B21A7406A20431D687346C30ABEBEA6 /* Pods-TMNavigationController_Example.debug.xcconfig */;
@@ -778,15 +794,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F82FC48C7DFCA9C85056ADB7C4142E0 /* Build configuration list for PBXNativeTarget "TMNavigationController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				466B8B540616B65B9B1507D99FB02EF6 /* Debug */,
-				2CFD5B1FA1F8861DA39015CB82CB1EAA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -801,6 +808,15 @@
 			buildConfigurations = (
 				A5A7A0D834CC925C856C377694F972D3 /* Debug */,
 				7D0A18C1C9976AB565216D1CF4914DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BEB863B02EFCC9F12E21527648DA870 /* Build configuration list for PBXNativeTarget "TMNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1593B014F3342481FE591B91BAC2B4B3 /* Debug */,
+				F82E963CF1181796C8CC882C0D356335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

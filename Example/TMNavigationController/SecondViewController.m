@@ -45,7 +45,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"SecondSecond";
-    
+    // 只使用现有业务接口验证双模式，不提供额外切换配置。
+    self.navigationController.navigationBarHidden = YES;
+    self.navigationRightBarHidden = NO;
+    self.navigationRightBarTitle = @"保存\n资料";
+    self.navigationBar.rightButton.titleLabel.numberOfLines = 2;
+    self.navigationBar.rightButton.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    [self.navigationBar.rightButton setTitleColor:UIColor.grayColor forState:UIControlStateDisabled];
+    [self navigationRightButtonClickBlock:^(UIButton *button) {
+        button.selected = !button.selected;
+        [button setTitle:button.selected ? @"已保存" : @"保存\n资料" forState:UIControlStateNormal];
+    }];
+    self.navigationRightFirstBarHidden = NO;
+    self.navigationRightFirstBarImage = [UIImage systemImageNamed:@"square.and.arrow.up"];
 }
 - (IBAction)push:(id)sender {
     ThirdViewController * vc = [ThirdViewController new];

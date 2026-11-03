@@ -189,7 +189,7 @@
 }
 - (void)setNavigationRightFirstBarImage:(UIImage *)navigationRightFirstBarImage{
     if (navigationRightFirstBarImage) {
-        self.navigationBar.rightFirstButton.titleLabel.text = @"";
+        [self.navigationBar.rightFirstButton setTitle:nil forState:UIControlStateNormal];
         [self.navigationBar.rightFirstButton setImage:navigationRightFirstBarImage forState:UIControlStateNormal];
     }
     [self.navigationBar setNeedsLayout];
@@ -200,7 +200,7 @@
 }
 - (void)setNavigationRightBarImage:(UIImage *)navigationRightBarImage{
     if (navigationRightBarImage) {
-        self.navigationBar.rightButton.titleLabel.text = @"";
+        [self.navigationBar.rightButton setTitle:nil forState:UIControlStateNormal];
         [self.navigationBar.rightButton setImage:navigationRightBarImage forState:UIControlStateNormal];
     }
     [self.navigationBar setNeedsLayout];
