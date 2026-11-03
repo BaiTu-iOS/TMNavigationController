@@ -280,6 +280,24 @@
     XCTAssertEqual(_page.navigationItem.rightBarButtonItems.count, 1);
 }
 
+- (void)testReplacingStackLoadsOnlyTopAndAttachesItsNavigationBar
+{
+    for (NSNumber *system in @[@NO, @YES]) {
+        [self applySystemLayout:system.boolValue];
+        UIViewController *history = [[UIViewController alloc] init];
+        UIViewController *top = [[UIViewController alloc] init];
+        XCTAssertFalse(history.isViewLoaded);
+        XCTAssertFalse(top.isViewLoaded);
+        [_navigation setViewControllers:@[history, top] animated:NO];
+        XCTAssertEqual(_navigation.topViewController, top);
+        XCTAssertTrue(top.isViewLoaded);
+        XCTAssertNotNil(top.navigationBar);
+        XCTAssertEqual(top.navigationBar.superview, top.viewIfLoaded);
+        XCTAssertFalse(history.isViewLoaded);
+        _page = top;
+    }
+}
+
 - (void)testPoppedPageReleasesItsSystemButtonAndItem
 {
     [self applySystemLayout:YES];

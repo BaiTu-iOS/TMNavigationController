@@ -142,7 +142,9 @@
     }
     [super setViewControllers:controllers animated:animated];
     for (UIViewController *controller in controllers) {
-        if (controller.isViewLoaded) [controller.view addSubview:controller.navigationBar];
+        if (controller == self.topViewController || controller.isViewLoaded) {
+            [controller.view addSubview:controller.navigationBar];
+        }
     }
     [self tm_updateSystemPresentation];
 }
