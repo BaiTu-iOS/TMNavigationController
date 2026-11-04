@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9EB87C17A444401B2780001 /* TMNavigationControllerTitlePresentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EB87C17A444401B2780002 /* TMNavigationControllerTitlePresentationTests.m */; };
 		5DB91C95923F26CC7BA30440 /* TMNavigationControllerSystemButtonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2189D4A01C3222961B2230CC /* TMNavigationControllerSystemButtonsTests.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9EB87C17A444401B2780002 /* TMNavigationControllerTitlePresentationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMNavigationControllerTitlePresentationTests.m; sourceTree = "<group>"; };
 		05C2FD42DDF467F369FB9DB8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2189D4A01C3222961B2230CC /* TMNavigationControllerSystemButtonsTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TMNavigationControllerSystemButtonsTests.m; sourceTree = "<group>"; };
 		2ECDADCEE14BD1FB5D8DE27C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				2F3C9569CD0DED83750C73F0 /* TMSystemLayoutNavigationController.h */,
 				8F2C5AA67979EB45014B7CF7 /* TMSystemLayoutNavigationController.m */,
 				2189D4A01C3222961B2230CC /* TMNavigationControllerSystemButtonsTests.m */,
+				C9EB87C17A444401B2780002 /* TMNavigationControllerTitlePresentationTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 				6CC62A640A26E3DF7B025065 /* TMSystemLayoutNavigationController.m in Sources */,
 				5DB91C95923F26CC7BA30440 /* TMNavigationControllerSystemButtonsTests.m in Sources */,
+				C9EB87C17A444401B2780001 /* TMNavigationControllerTitlePresentationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

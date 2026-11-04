@@ -277,6 +277,8 @@
 }
 - (void)setTitle:(NSString *)title{
     _title = title;
+    // 业务可直接设置 navigationBar.title；系统模式同步同一份标题文本。
+    if (_tm_systemButtonsActive) _tm_owner.navigationItem.title = title;
     if (!title) {
         _titleLabel.text = @"";
         return;
