@@ -171,7 +171,8 @@
 
     UIEdgeInsets insets = hostView.safeAreaInsets;
     CGFloat width = CGRectGetWidth(hostView.bounds);
-    self.frame = CGRectMake(0, 0, width, insets.top + 44.0);
+    // 系统模式的标题栏已经计入顶部安全区，自定义栏不再额外占用一行。
+    self.frame = CGRectMake(0, 0, width, insets.top + (_tm_systemButtonsActive ? 0 : 44.0));
     _backgroundImageView.frame = self.bounds;
     _lineView.frame = CGRectMake(0, CGRectGetHeight(self.bounds) - 0.5, width, 0.5);
     [CATransaction begin];

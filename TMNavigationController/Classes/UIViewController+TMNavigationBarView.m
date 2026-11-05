@@ -10,6 +10,12 @@
 #import "TMNavigationController.h"
 #import "TMNavigationConfig.h"
 
+@interface UIViewController ()
+
+- (void)tm_setTitle:(NSString *)title;
+
+@end
+
 @implementation UIViewController (TMNavigationBarView)
 
 @dynamic navigationCanDragBack;
@@ -21,7 +27,6 @@
 @dynamic navigationRightBarHidden;
 @dynamic navigationRightBarTitleColor;
 @dynamic navigationRightBarTitle;
-@dynamic title;
 @dynamic navigationBackButtonImage;
 @dynamic navigationBarBackgroundColor;
 @dynamic navigationBarBottomLineBackgroundColor;
@@ -32,6 +37,14 @@
 @dynamic navigationRightFirstBarTitleColor;
 @dynamic navigationBarBackgroundImage;
 @dynamic navigationLeftBarTitleColor;
+
++ (void)load
+{
+    // 保留 UIKit 的标题存储与更新链路，避免分类同名实现与系统实现互相覆盖。
+    Method original = class_getInstanceMethod(self, @selector(setTitle:));
+    Method replacement = class_getInstanceMethod(self, @selector(tm_setTitle:));
+    method_exchangeImplementations(original, replacement);
+}
 
 - (BOOL)navigationCanDragBack {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
@@ -206,17 +219,16 @@
     [self.navigationBar setNeedsLayout];
     objc_setAssociatedObject(self, @selector(navigationRightBarImage), navigationRightBarImage, OBJC_ASSOCIATION_RETAIN);
 }
-- (NSString *)title{
-    return objc_getAssociatedObject(self, _cmd);
-}
-- (void)setTitle:(NSString *)title{
-    if (title && self.navigationBar ) {
-        if ([self.navigationBar isKindOfClass:[TMNavigationBarView class]]) {
-            self.navigationBar.title = title;
-        }
+
+- (void)tm_setTitle:(NSString *)title
+{
+    [self tm_setTitle:title];
+    // UINavigationController 自身的 navigationBar 是系统栏，仅同步组件管理的自定义栏。
+    if ([self.navigationBar isKindOfClass:TMNavigationBarView.class]) {
+        self.navigationBar.title = title;
     }
-    objc_setAssociatedObject(self, @selector(title), title, OBJC_ASSOCIATION_COPY);
 }
+
 - (void)setNavigationBarTitleColor:(UIColor *)navigationBarTitleColor{
     if (navigationBarTitleColor) {
         self.navigationBar.myTitleColor = navigationBarTitleColor;

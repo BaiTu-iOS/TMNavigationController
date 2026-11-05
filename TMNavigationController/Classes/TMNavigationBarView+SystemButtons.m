@@ -38,6 +38,7 @@
     if (active != self.tm_systemButtonsActive) {
         if (active) self.tm_originalHidesBackButton = self.tm_owner.navigationItem.hidesBackButton;
         self.tm_systemButtonsActive = active;
+        [self setNeedsLayout];
         // 系统模式只显示原生标题，保留业务对自定义标题 hidden/alpha 的设置。
         self.titleLabel.layer.mask = active ? [CALayer layer] : nil;
         self.titleLabel.accessibilityElementsHidden = active;

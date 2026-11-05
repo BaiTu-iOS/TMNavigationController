@@ -117,6 +117,47 @@
     XCTAssertGreaterThan([self visibleCustomTitlePixels], 0);
 }
 
+- (void)testControllerTitleChangesKeepNativeAndCustomTitlesInSync
+{
+    UIViewController *next = [[UIViewController alloc] init];
+    [_navigation pushViewController:next animated:NO];
+    next.title = @"设置";
+    XCTAssertEqualObjects(next.navigationItem.title, @"设置");
+    XCTAssertEqualObjects(next.navigationBar.titleLabel.text, @"设置");
+    [self applySystemLayout:YES];
+    XCTAssertEqualObjects(_navigation.navigationBar.topItem.title, @"设置");
+    next.title = @"语言设置";
+    XCTAssertEqualObjects(_navigation.navigationBar.topItem.title, @"语言设置");
+    XCTAssertEqualObjects(next.navigationBar.titleLabel.text, @"语言设置");
+    next.title = nil;
+    XCTAssertNil(next.navigationItem.title);
+    XCTAssertEqualObjects(next.navigationBar.titleLabel.text, @"");
+    next.title = @"设置";
+    [self applySystemLayout:NO];
+    XCTAssertEqualObjects(next.navigationBar.titleLabel.text, @"设置");
+    XCTAssertNil(next.navigationBar.titleLabel.layer.mask);
+}
+
+- (void)testControllerOutsideCustomNavigationKeepsUIKitTitleBehavior
+{
+    UIViewController *page = [[UIViewController alloc] init];
+    page.title = @"原生页面";
+    XCTAssertEqualObjects(page.navigationItem.title, @"原生页面");
+    page.title = nil;
+    XCTAssertNil(page.navigationItem.title);
+}
+
+- (void)testSystemTitleDoesNotReserveASecondNavigationRow
+{
+    for (NSUInteger index = 0; index < 3; index++) {
+        [self applySystemLayout:YES];
+        XCTAssertFalse(_navigation.isNavigationBarHidden);
+        XCTAssertEqualWithAccuracy(CGRectGetMaxY(_page.navigationBar.frame), _page.view.safeAreaInsets.top, 0.01);
+        [self applySystemLayout:NO];
+        XCTAssertEqualWithAccuracy(CGRectGetHeight(_page.navigationBar.frame), _page.view.safeAreaInsets.top + 44, 0.01);
+    }
+}
+
 - (void)testBusinessTitleVisibilitySurvivesSystemModeChanges
 {
     UILabel *title = _page.navigationBar.titleLabel;
