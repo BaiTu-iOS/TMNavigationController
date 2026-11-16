@@ -42,6 +42,8 @@
         // 系统模式只显示原生标题，保留业务对自定义标题 hidden/alpha 的设置。
         self.titleLabel.layer.mask = active ? [CALayer layer] : nil;
         self.titleLabel.accessibilityElementsHidden = active;
+        // 系统栏接管后不绘制自定义横线；用遮罩保留业务原有的 hidden、alpha 和颜色。
+        self.lineView.layer.mask = active ? [CALayer layer] : nil;
         if (active) self.tm_owner.navigationItem.title = self.title;
         for (TMNavigationButton *button in [self tm_buttons])
             button.tm_systemPresentationActive = active;

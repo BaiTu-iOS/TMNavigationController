@@ -21,6 +21,9 @@
 /// 曾由本导航栈管理的页面；移出栈时解除其系统展示。
 @property(nonatomic, strong) NSHashTable<UIViewController *> *tm_managedControllers;
 
+/// 返回转场中的离场页面；交互取消前不能按临时导航栈解除按钮映射。
+@property(nonatomic, weak) UIViewController *tm_transitionFromController;
+
 - (void)tm_prepareNavigationBarForController:(UIViewController *)controller root:(BOOL)root;
 - (BOOL)tm_prefersSystemButtons;
 - (void)tm_updateSystemPresentation;
@@ -107,12 +110,19 @@
     BOOL system = [self tm_prefersSystemButtons];
     for (UIViewController *controller in self.tm_managedControllers.allObjects) {
         BOOL inStack = [self.viewControllers containsObject:controller];
+        // 侧滑开始时 UIKit 已暂时移出当前页，保留其展示直到 didShow 确认最终页面。
+        if (!inStack && controller == self.tm_transitionFromController) continue;
         [controller.navigationBar tm_applySystemButtons:system && inStack];
         if (!inStack) [self.tm_managedControllers removeObject:controller];
     }
+    // 返回尚未确定完成时沿用当前系统栏显隐，避免临时目标页打断侧栏的取消动画。
+    if (self.tm_transitionFromController && ![self.viewControllers containsObject:self.tm_transitionFromController]) return;
     TMNavigationBarView *bar = self.topViewController.navigationBar;
-    BOOL hidden = system && bar ? bar.hidden : self.tm_requestedNavigationBarHidden;
-    // 旧业务的“隐藏横向系统栏”在竖栏模式下由自定义栏的业务显隐决定。
+    UINavigationItem *item = self.topViewController.navigationItem;
+    // RN 等页面隐藏自定义栏后仍会直接配置系统按钮，竖栏需继续承载这些操作。
+    BOOL hasSystemButtons = item.leftBarButtonItems.count || item.rightBarButtonItems.count;
+    BOOL hidden = system && bar ? bar.hidden && !hasSystemButtons : self.tm_requestedNavigationBarHidden;
+    // 普通横向导航栏继续遵循业务原有显隐请求。
     if (self.isNavigationBarHidden != hidden) [super setNavigationBarHidden:hidden animated:NO];
 }
 
@@ -125,7 +135,10 @@
 {
     self.tm_requestedNavigationBarHidden = hidden;
     TMNavigationBarView *bar = self.topViewController.navigationBar;
-    BOOL actual = self.isViewLoaded && [self tm_prefersSystemButtons] && bar ? bar.hidden : hidden;
+    UINavigationItem *item = self.topViewController.navigationItem;
+    // 与布局同步保持一致，隐藏自定义栏不应移除页面直接配置的系统按钮。
+    BOOL hasSystemButtons = item.leftBarButtonItems.count || item.rightBarButtonItems.count;
+    BOOL actual = self.isViewLoaded && [self tm_prefersSystemButtons] && bar ? bar.hidden && !hasSystemButtons : hidden;
     [super setNavigationBarHidden:actual animated:animated];
 }
 
@@ -198,8 +211,15 @@
     [viewController.view addSubview:viewController.navigationBar];
     [self tm_updateSystemPresentation];
 }
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    self.tm_transitionFromController = [navigationController.transitionCoordinator viewControllerForKey:UITransitionContextFromViewControllerKey];
+}
+
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     self.shouldIgnorePushingViewControllers = NO;
+    // 完成与取消都会进入这里：恢复页仍在栈中，真正离场页才解除系统展示。
+    self.tm_transitionFromController = nil;
     [self tm_updateSystemPresentation];
 }
 - (void)setPropertyWithViewController:(UIViewController*)viewController barView:(TMNavigationBarView *)barView {
